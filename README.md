@@ -5,43 +5,45 @@
 &nbsp;
 
 
-# Neumorphism
+# Neumorfizm
 
-Neumorphism to pewien trend w projektowaniu, który opiera się na odpowiednim wykorzystaniu cieni.
+Neumorfizm to pewien trend w projektowaniu, który opiera się na odpowiednim wykorzystaniu cieni.
 
-W tym projekcie Twoim zadaniem będzie utworzeniu kilku komponentów zgodnych z tym trendem wykorzystując Styled Components. Na ich podstawie zbudujesz rozbudowany formularz. Od Ciebie będzie zależeć jakie elementy będą miały się w nim pojawić.
+W tym projekcie Twoim zadaniem będzie utworzenie z pomocą Styled Components kilku komponentów zgodnych z tym trendem.
 
-Zanim przejdziesz do implementowania to zapoznaj się z kilkoma artykułami na temat nowego trendu:
-- https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6 (jeśli wykorzystałeś darmowy limit to wystarczy, że otworzyć tą stronę w oknie "imcognito")
-- https://www.justinmind.com/blog/neumorphism-ui/
-- https://opengeekslab.com/blog/neumorphism-the-next-big-thing-ui-design/
+Formularz powinien być rozbudowany, lecz to od Ciebie zależy, jakie elementy w nim zawrzesz.
+
+Zanim przejdziesz do implementowania, zapoznaj się z kilkoma artykułami na temat neumorfizmu:
+- [Neumorphism in user interfaces](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6) (jeśli wykorzystałeś darmowy limit, to wystarczy otworzyć tę stronę w trybie incognito)
+- [Neumorphism: why it’s all the hype in UI design](https://www.justinmind.com/blog/neumorphism-ui/)
+- [Neumorphism. The Next Big Thing In UI Design?](https://opengeekslab.com/blog/neumorphism-the-next-big-thing-ui-design/)
 
 ## Komponenty
 
-Po zapoznaniu się z linkami podanymi wyżej wiesz już na czym polega Neumorphism. Jeśli potrzebujesz dodatkowych wskazówek to zachęcam Cię do [skorzystania z generatora](https://neumorphism.io/). Możesz również inspirować się [przykładami innych](https://bashooka.com/inspiration/neumorphism-ui-design-examples/).
+Gdy zdecydujesz, z czego ma się składać Twój formularz, stwórz odpowiednie komponenty: pola tekstowe, listy rozwijane, checkboxy, buttony, paski postępu itd. Możesz skorzystać z podpowiedzi z punktu poniżej (Formularz).
 
-Jeśli masz własną koncepcję komponentów to nie widzę przeszkód, abyś z nich skorzystał. Jeśli nie to możesz się wzorować z poniższą grafiką od [Emy Lascan](https://dribbble.com/shots/9527558-Freebie-Neumorphic-UX-UI-Elements).
+Po zapoznaniu się z podlinkowanymi artykułami wiesz już, na czym polega neumorfizm. Jeśli potrzebujesz dodatkowych wskazówek, to zachęcam Cię do skorzystania z [generatora kodu CSS](https://neumorphism.io/). Możesz również inspirować się [przykładami innych](https://bashooka.com/inspiration/neumorphism-ui-design-examples/).
+
+Jeśli masz własną koncepcję komponentów, to nie widzę przeszkód, abyś z niej skorzystał. Jeśli nie, to możesz się wzorować na poniższej grafice od [Emy Lascan](https://dribbble.com/shots/9527558-Freebie-Neumorphic-UX-UI-Elements).
 
 ![](./example.png)
 
-
 ## Formularz
 
-W momencie kiedy masz już gotowe komponenty możesz zbudować swój formularz.
+Kiedy będziesz mieć gotowe komponenty, zacznij budować swój formularz.
 
-Pamiętaj, aby prezentował on w pełni Twoje możliwości np.:
-- możesz go podzielić na 3 etapy (ekrany), po których można wygodnie się przemieszczać
-- lista rozwijana jest implementowana przez specjalne rozwiązanie innne niż `select`
-- elementy typu `chceckbox` czy `radio` są animowane
-- poziom wypełania formularza jest prezentowane przez pasek postępu
-- użytkownik po wprowadzeniu błędnych danych jest natychmiastowo o tym informowany
-
-
-Jestem pewny, że ten porojekt mocno zainteresuje Twojego przyszłego pracodawcę!
+Pamiętaj, aby w pełni prezentował on Twoje możliwości, np.:
+- składał się z trzech etapów (kroków, ekranów), po których można wygodnie się przemieszczać
+- posiadał rozwijaną listę implementowaną przez specjalne rozwiązanie, inne niż `select`
+- miał animowane elementy typu `chceckbox` czy `radio`
+- poziom wypełnienia pól prezentował przez pasek postępu
+- informował użytkownika od razu po wprowadzeniu błędnych danych.
 
 
-PS. Konfigurację środowiska robisz według własnego uznania.
+Jestem pewny, że ten projekt mocno zainteresuje Twojego przyszłego pracodawcę!
 
+
+PS Konfigurację środowiska zrób według własnego uznania.
 
 
 &nbsp;
@@ -49,4 +51,3 @@ PS. Konfigurację środowiska robisz według własnego uznania.
 > ⭐ ***README** to coś więcej niż opis. Poprzez nie **pokazujesz swoje mocne strony** – swoją dokładność, sposób myślenia i podejście do rozwiązywania problemów. Niech Twoje README pokaże, że masz **świetne predyspozycje do rozwoju!***
 > 
 > 🎁 *Zacznij od razu. Skorzystaj z **[szablonu README i wskazówek](https://github.com/devmentor-pl/readme-template)**.* 
-
