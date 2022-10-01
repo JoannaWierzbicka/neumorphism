@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 import { styled as styledMui } from '@mui/material/styles'
-import { Autocomplete, Box } from '@mui/material'
+import { Autocomplete, Box, Paper } from '@mui/material'
 
-const Button = styled.button`
+const StyledButton = styled.button`
 padding: 1rem 2rem;
 background: #efefef;
 border: none;
@@ -35,10 +35,10 @@ box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
 
 `
 const StyledBox = styledMui(Box)(() => ({
+  height: '80vh',
   padding: '10px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-evenly',
   alignItems: 'center',
   boxShadow: '.8rem .8rem 1.4rem #c8d0e7, -.2rem -.2rem 1.8rem white',
   borderRadius: '10px',
@@ -55,6 +55,16 @@ const StyledAutocomplete = styledMui(Autocomplete)(() => ({
     borderRadius: '20px',
     padding: '4px'
   }
+}))
+
+const StyledPaper = styled(Paper)(() => ({
+  backgroundColor: '#e2e9f3',
+  margin: '1em',
+  padding: '0.25em',
+  textAlign: 'center',
+  borderRadius: '10px',
+  boxShadow: ' 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #c8d0e7'
+
 }))
 
 const Icon = styled('span')(() => ({
@@ -79,4 +89,4 @@ const CheckedIcon = styled(Icon)({
   }
 })
 
-export { Button, StyledBox, StyledAutocomplete, Icon, CheckedIcon }
+export { StyledButton, StyledBox, StyledAutocomplete, Icon, CheckedIcon, StyledPaper }

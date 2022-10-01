@@ -8,7 +8,7 @@ import SecondPage from './components/pages/SecondPage'
 import ThirdPage from './components/pages/ThirdPage'
 
 import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box } from '@mui/material'
-import { StyledBox, Button } from './components/styledComponents'
+import { StyledBox, StyledButton } from './components/styledComponents'
 
 export const App = () => {
   const [activeStep, setActiveStep] = React.useState(0)
@@ -22,7 +22,7 @@ export const App = () => {
     setActiveStep(activeStep - 1)
   }
 
-  const steps = ['Informacje na temat pobytu', 'Informacje dodatkowe', 'Ocena ogólna']
+  const steps = ['Informacje na temat pobytu', 'Ocena ogólna', 'Dane użytkownika']
 
   function getStepContent (step) {
     switch (step) {
@@ -61,7 +61,7 @@ export const App = () => {
               </Typography>
               <Stepper
                 activeStep={activeStep}
-                sx={{ pt: 3, pb: 5 }}
+                sx={{ pt: 3, pb: 3 }}
               >
                 {steps.map((label) => (
                   <Step key={label}>
@@ -83,23 +83,21 @@ export const App = () => {
                   : (
                     <React.Fragment>
                       {getStepContent(activeStep)}
-                      <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                      <Box sx={{ width: '800px', display: 'flex', justifyContent: 'flex-end' }}>
                         {activeStep !== 0 && (
-                          <Button
+                          <StyledButton
                             onClick={handleBack}
-                            sx={{ mt: 3, ml: 1 }}
                           >
                             Back
-                          </Button>
+                          </StyledButton>
                         )}
 
-                        <Button
+                        <StyledButton
                           variant={'contained'}
                           onClick={handleNext}
-                          sx={{ mt: 3, ml: 1 }}
                         >
                           {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                        </Button>
+                        </StyledButton>
                       </Box>
                     </React.Fragment>
                     )}

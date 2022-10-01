@@ -1,12 +1,20 @@
 import React from 'react'
-import { Typography } from '@mui/material'
-import { Button } from '../styledComponents'
+import { Typography, Box } from '@mui/material'
+import { StyledButton } from '../styledComponents'
 import PropTypes from 'prop-types'
 
 export const MainPage = (props) => {
   const { startForm } = props
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        height: '80vh'
+      }}
+    >
       <Typography
         variant={'h4'}
         align={'center'}
@@ -25,10 +33,10 @@ export const MainPage = (props) => {
         Ankieta jest w pełni anonimowa i służy wyłącznie do analizy oraz ewentualnej poprawy jakości świadczonych usług.
         Z góry dziękujemy za udzielenie odpowiedzi!
       </Typography>
-      <Button onClick={startForm}>START
-      </Button>
+      <StyledButton onClick={startForm}>START
+      </StyledButton>
 
-    </>
+    </Box>
 
   )
 }
