@@ -4,14 +4,15 @@
 import React from 'react'
 import MainPage from './components/pages/MainPage'
 import FirstPage from './components/pages/FirstPage'
-// import SecondPage from './components/pages/SecondPage'
-// import ThirdPage from './components/pages/ThirdPage'
+import SecondPage from './components/pages/SecondPage'
+import ThirdPage from './components/pages/ThirdPage'
 
-import { Container, CssBaseline } from '@mui/material'
-import { Box } from './components/styledComponents'
+import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box } from '@mui/material'
+import { StyledBox, Button } from './components/styledComponents'
 
 export const App = () => {
   const [activeStep, setActiveStep] = React.useState(0)
+  const [startForm, setStartForm] = React.useState(false)
 
   const handleNext = () => {
     setActiveStep(activeStep + 1)
@@ -35,7 +36,11 @@ export const App = () => {
         throw new Error('Unknown step')
     }
   }
-
+  
+  const turnFirstPage = () => {
+    setStartForm(true)
+  }
+  
   return (
     <>
       <CssBaseline/>
@@ -44,10 +49,65 @@ export const App = () => {
         sx={{
           m: 4
         }}
-      ><Box>
-        <FirstPage/>
-      </Box>
+      ><StyledBox>
+        {!startForm ? (<MainPage startForm={() => turnFirstPage()}/>) : null}
+        {startForm
+          ? (
+            <><Typography
+              variant={'h4'}
+              align={'center'}
+              >
+              ANKIETA
+              </Typography>
+              <Stepper
+                activeStep={activeStep}
+                sx={{ pt: 3, pb: 5 }}
+              >
+                {steps.map((label) => (
+                  <Step key={label}>
+                    <StepLabel>{label}</StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+              <React.Fragment>
+                {activeStep === steps.length
+                  ? (
+                    <Typography
+                      variant={'h5'}
+                      gutterBottom
+                    >
+                      Dziękujemy za wypełnienie ankiety
+                    </Typography>
+              
+                    )
+                  : (
+                    <React.Fragment>
+                      {getStepContent(activeStep)}
+                      <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                        {activeStep !== 0 && (
+                          <Button
+                            onClick={handleBack}
+                            sx={{ mt: 3, ml: 1 }}
+                          >
+                            Back
+                          </Button>
+                        )}
 
+                        <Button
+                          variant={'contained'}
+                          onClick={handleNext}
+                          sx={{ mt: 3, ml: 1 }}
+                        >
+                          {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                        </Button>
+                      </Box>
+                    </React.Fragment>
+                    )}
+              </React.Fragment>
+            </>
+            )
+          : null}
+       </StyledBox>
       </Container>
 
     </>

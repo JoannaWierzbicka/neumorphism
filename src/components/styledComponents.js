@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { styled as styledMui } from '@mui/material/styles'
-import { Autocomplete } from '@mui/material'
+import { Autocomplete, Box } from '@mui/material'
 
 const Button = styled.button`
 padding: 1rem 2rem;
@@ -34,24 +34,27 @@ box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
 }
 
 `
-const Box = styled.div`
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: #E4EBF5;
-        box-shadow: .8rem .8rem 1.4rem #c8d0e7, -.2rem -.2rem 1.8rem white;
-        border-radius: 10px;
-`
+const StyledBox = styledMui(Box)(() => ({
+  padding: '10px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly',
+  alignItems: 'center',
+  boxShadow: '.8rem .8rem 1.4rem #c8d0e7, -.2rem -.2rem 1.8rem white',
+  borderRadius: '10px',
+  backgroundColor: '#E4EBF5',
+  boxSizing: 'border-box'
+
+}))
 
 const StyledAutocomplete = styledMui(Autocomplete)(() => ({
-  width: '300px',
-  borderRadius: '30px',
+  width: '250px',
+  borderRadius: '20px',
   boxShadow: 'inset 10px 12px 30px #cdd5e1, inset -10px -12px 130px #ffffff',
   '& .MuiInputBase-root': {
-    borderRadius: '30px'
+    borderRadius: '20px',
+    padding: '4px'
   }
 }))
 
-export { Button, Box, StyledAutocomplete }
+export { Button, StyledBox, StyledAutocomplete }

@@ -1,23 +1,17 @@
 import React from 'react'
 
 import { Typography, TextField, Checkbox, FormControlLabel, FormGroup, Paper, Grid } from '@mui/material'
-import { StyledAutocomplete, Button } from '../styledComponents'
+import { StyledAutocomplete } from '../styledComponents'
 import { styled } from '@mui/material/styles'
 
 const Item = styled(Paper)(() => ({
-  backgroundColor: 'white',
-  margin: '2em',
-  padding: '1em',
+  backgroundColor: '#e2e9f3',
+  margin: '1em',
+  padding: '0.25em',
   textAlign: 'center',
   borderRadius: '10px',
-  boxShadow: '.8rem .8rem 1.4rem #c8d0e7, -.2rem -.2rem 1.8rem white'
+  boxShadow: ' 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #c8d0e7'
 
-}))
-
-const Check = styled(Checkbox)(() => ({
-  '& .MuiButtonBase-root': {
-    boxShadow: 'inset 10px 12px 30px #cdd5e1, inset -10px -12px 130px #ffffff'
-  }
 }))
 
 export const FirstPage = () => {
@@ -35,10 +29,10 @@ export const FirstPage = () => {
           <Item><Typography
             align={'left'}
 
-            variant={'h5'}
+            variant={'body1'}
             gutterBottom
                 >Proszę określić rodzaj pobytu:
-          </Typography>
+                </Typography>
             <StyledAutocomplete
               blurOnSelect
               options={['prywatny', 'służbowy']}
@@ -52,69 +46,88 @@ export const FirstPage = () => {
         >
           <Item><Typography
             align={'left'}
-            variant={'h5'}
+            variant={'body1'}
             gutterBottom
                 >Jak długo trwał pobyt?
-          </Typography>
+                </Typography>
             <StyledAutocomplete
               blurOnSelect
-              options={[1, 2, 3, 4, '5 lub więcej']}
+              options={['1 doba', '2 doby', '3 doby', '4 doby', '5 lub więcej']}
               renderInput={(params) => <TextField {...params}/>}
             />
           </Item>
         </Grid>
         <Grid
+          container
           item
           xs={6}
         >
-          <Item> <Typography
-            align={'left'}
-            variant={'h5'}
-            gutterBottom
-                 >Ile osób korzystało z noclegu?
-          </Typography>
-            <StyledAutocomplete
-              blurOnSelect
-              options={[1, 2, 3, 4, '5 lub więcej']}
-              renderInput={(params) => <TextField {...params}/>}
-            />
-          </Item>
+          <Grid
+            item
+            xs={12}
+          >
+            <Item> <Typography
+              align={'left'}
+              variant={'body1'}
+              gutterBottom
+                   >Ile osób korzystało z noclegu?
+                   </Typography>
+              <StyledAutocomplete
+                blurOnSelect
+                options={[1, 2, 3, 4, '5 lub więcej']}
+                renderInput={(params) => <TextField {...params}/>}
+              />
+            </Item>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+          >
+            <Item> <Typography
+              align={'left'}
+              variant={'body1'}
+              gutterBottom
+                   >Czy korzystali Państwo z wyżywienia?
+                   </Typography>
+              <StyledAutocomplete
+                blurOnSelect
+                options={['Tak - śniadanie i obiadokolacja', 'Tak - tylko śniadanie', 'Nie']}
+                renderInput={(params) => <TextField {...params}/>}
+              />
+            </Item>
+          </Grid>
         </Grid>
+
         <Grid
           item
           xs={6}
         >
           <Item><Typography
             align={'left'}
-            variant={'h5'}
+            variant={'body1'}
             gutterBottom
                 >Z których atrakcji Państwo korzystali?
-          </Typography>
+                </Typography>
             <FormGroup>
               <FormControlLabel
-                control={<Check/>}
-                label={'Parking'}
-              />
-              <FormControlLabel
-                control={<Check />}
+                control={<Checkbox />}
                 label={'Restauracja'}
               />
               <FormControlLabel
-                control={<Check />}
+                control={<Checkbox />}
                 label={'Basen'}
               />
               <FormControlLabel
-                control={<Check />}
+                control={<Checkbox />}
                 label={'Wypożyczalnia rowerów'}
               />
               <FormControlLabel
-                control={<Check/>}
+                control={<Checkbox/>}
                 label={'Plac zabaw dla dzieci'}
               />
             </FormGroup>
           </Item>
         </Grid>
-        <Button>NEXT</Button>
 
       </Grid>
     </>
