@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Typography, TextField, Checkbox, FormControlLabel, FormGroup, Paper, Grid } from '@mui/material'
-import { StyledAutocomplete } from '../styledComponents'
+import { StyledAutocomplete, Icon, CheckedIcon } from '../styledComponents'
 import { styled } from '@mui/material/styles'
 
 const Item = styled(Paper)(() => ({
@@ -32,7 +32,7 @@ export const FirstPage = () => {
             variant={'body1'}
             gutterBottom
                 >Proszę określić rodzaj pobytu:
-                </Typography>
+          </Typography>
             <StyledAutocomplete
               blurOnSelect
               options={['prywatny', 'służbowy']}
@@ -49,7 +49,7 @@ export const FirstPage = () => {
             variant={'body1'}
             gutterBottom
                 >Jak długo trwał pobyt?
-                </Typography>
+          </Typography>
             <StyledAutocomplete
               blurOnSelect
               options={['1 doba', '2 doby', '3 doby', '4 doby', '5 lub więcej']}
@@ -71,7 +71,7 @@ export const FirstPage = () => {
               variant={'body1'}
               gutterBottom
                    >Ile osób korzystało z noclegu?
-                   </Typography>
+            </Typography>
               <StyledAutocomplete
                 blurOnSelect
                 options={[1, 2, 3, 4, '5 lub więcej']}
@@ -88,7 +88,7 @@ export const FirstPage = () => {
               variant={'body1'}
               gutterBottom
                    >Czy korzystali Państwo z wyżywienia?
-                   </Typography>
+            </Typography>
               <StyledAutocomplete
                 blurOnSelect
                 options={['Tak - śniadanie i obiadokolacja', 'Tak - tylko śniadanie', 'Nie']}
@@ -107,22 +107,35 @@ export const FirstPage = () => {
             variant={'body1'}
             gutterBottom
                 >Z których atrakcji Państwo korzystali?
-                </Typography>
+          </Typography>
             <FormGroup>
               <FormControlLabel
-                control={<Checkbox />}
+                control={
+                  <Checkbox
+                    icon={<Icon/>}
+                    checkedIcon={<CheckedIcon />}
+                  />}
                 label={'Restauracja'}
               />
               <FormControlLabel
-                control={<Checkbox />}
+                control={<Checkbox
+                  icon={<Icon/>}
+                  checkedIcon={<CheckedIcon />}
+                         />}
                 label={'Basen'}
               />
               <FormControlLabel
-                control={<Checkbox />}
+                control={<Checkbox
+                  icon={<Icon/>}
+                  checkedIcon={<CheckedIcon />}
+                         />}
                 label={'Wypożyczalnia rowerów'}
               />
               <FormControlLabel
-                control={<Checkbox/>}
+                control={<Checkbox
+                  icon={<Icon/>}
+                  checkedIcon={<CheckedIcon />}
+                         />}
                 label={'Plac zabaw dla dzieci'}
               />
             </FormGroup>
