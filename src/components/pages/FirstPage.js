@@ -1,14 +1,14 @@
 import React from 'react'
 
 import { Typography, TextField, Checkbox, FormControlLabel, FormGroup, Grid } from '@mui/material'
-import { StyledAutocomplete, Icon, CheckedIcon, StyledPaper } from '../styledComponents'
+import { StyledAutocomplete, IconCheckbox, CheckedIcon, StyledPaper } from '../styledComponents'
 
 export const FirstPage = () => {
   return (
     <>
       <Grid
         container
-        rowSpacing={1}
+        rowSpacing={0.5}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
         <Grid
@@ -101,28 +101,28 @@ export const FirstPage = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    icon={<Icon/>}
+                    icon={<IconCheckbox/>}
                     checkedIcon={<CheckedIcon />}
                   />}
                 label={'Restauracja'}
               />
               <FormControlLabel
                 control={<Checkbox
-                  icon={<Icon/>}
+                  icon={<IconCheckbox/>}
                   checkedIcon={<CheckedIcon />}
                          />}
                 label={'Basen'}
               />
               <FormControlLabel
                 control={<Checkbox
-                  icon={<Icon/>}
+                  icon={<IconCheckbox/>}
                   checkedIcon={<CheckedIcon />}
                          />}
                 label={'Wypożyczalnia rowerów'}
               />
               <FormControlLabel
                 control={<Checkbox
-                  icon={<Icon/>}
+                  icon={<IconCheckbox/>}
                   checkedIcon={<CheckedIcon />}
                          />}
                 label={'Plac zabaw dla dzieci'}

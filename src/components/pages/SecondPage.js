@@ -1,10 +1,15 @@
 import React from 'react'
 
-import { Typography, Grid, Rating } from '@mui/material'
+import { Typography, Grid, Rating, Slider, Box } from '@mui/material'
+
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied'
+import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied'
+
 import { StyledPaper } from '../styledComponents'
 
+import HoverRating from '../HoverRating'
+
 export const SecondPage = () => {
-  const [value, setValue] = React.useState(0)
   return (
     <>
       <Grid
@@ -23,12 +28,11 @@ export const SecondPage = () => {
               gutterBottom
             >Jak ocenia Pan/Pani dojazd do obiektu?
             </Typography>
-            <Rating
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue)
-              }}
-            />
+            <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+              <Typography variant={'caption'}>ŹLE</Typography>
+              <Rating max={8}/>
+              <Typography variant={'caption'}>DOBRZE</Typography>
+            </Box>
           </StyledPaper>
         </Grid>
         <Grid
@@ -40,14 +44,13 @@ export const SecondPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Jak ocenia Pan/Pani dojazd do obiektu?
+            >Jak ocenia Pan/Pani pracowników obiektu?
             </Typography>
-            <Rating
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue)
-              }}
-            />
+            <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+              <Typography variant={'caption'}>ŹLE</Typography>
+              <Rating max={8}/>
+              <Typography variant={'caption'}>DOBRZE</Typography>
+            </Box>
           </StyledPaper>
         </Grid>
         <Grid
@@ -59,14 +62,9 @@ export const SecondPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Jak ocenia Pan/Pani dojazd do obiektu?
+            >Jak ocenia Pan/Pani otoczenie obiektu oraz jego zagospodarowanie?
             </Typography>
-            <Rating
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue)
-              }}
-            />
+            <HoverRating/>
           </StyledPaper>
         </Grid>
 
@@ -79,14 +77,9 @@ export const SecondPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Jak ocenia Pan/Pani dojazd do obiektu?
+            >Jak ocenia Pan/Pani wygląd oraz wyposażenie pokoi?
             </Typography>
-            <Rating
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue)
-              }}
-            />
+            <HoverRating/>
           </StyledPaper>
         </Grid>
         <Grid
@@ -98,14 +91,13 @@ export const SecondPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Jak ocenia Pan/Pani dojazd do obiektu?
+            >Czy poleci Pan/Pani obiekt znajomym?
             </Typography>
-            <Rating
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue)
-              }}
-            />
+            <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+              <Typography variant={'caption'}>NIE</Typography>
+              <Slider sx={{ width: '200px' }}/>
+              <Typography variant={'caption'}>TAK</Typography>
+            </Box>
           </StyledPaper>
         </Grid>
         <Grid
@@ -117,14 +109,14 @@ export const SecondPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Jak ocenia Pan/Pani dojazd do obiektu?
+            >Ocena ogólna obiektu:
             </Typography>
-            <Rating
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue)
-              }}
-            />
+            <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+              <SentimentVeryDissatisfiedIcon/>
+              <Slider sx={{ width: '200px' }}/>
+              <SentimentVerySatisfiedIcon/>
+            </Box>
+
           </StyledPaper>
         </Grid>
 

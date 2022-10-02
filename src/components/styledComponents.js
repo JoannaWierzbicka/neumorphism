@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { styled as styledMui } from '@mui/material/styles'
-import { Autocomplete, Box, Paper } from '@mui/material'
+import { Autocomplete, Box, Paper, Rating } from '@mui/material'
 
 const StyledButton = styled.button`
 padding: 1rem 2rem;
@@ -67,7 +67,7 @@ const StyledPaper = styled(Paper)(() => ({
 
 }))
 
-const Icon = styled('span')(() => ({
+const IconCheckbox = styled('span')(() => ({
   borderRadius: '10px',
   margin: '6px',
   width: 18,
@@ -82,11 +82,20 @@ const Icon = styled('span')(() => ({
   }
 }))
 
-const CheckedIcon = styled(Icon)({
+const CheckedIcon = styled(IconCheckbox)({
   backgroundColor: '#079992',
   'input:hover ~ &': {
     backgroundColor: '#38ada9'
   }
 })
 
-export { StyledButton, StyledBox, StyledAutocomplete, Icon, CheckedIcon, StyledPaper }
+const StyledRating = styled(Rating)({
+  '& .MuiRating-iconFilled': {
+    color: '#ff6d75'
+  },
+  '& .MuiRating-iconHover': {
+    color: '#ff3d47'
+  }
+})
+
+export { StyledButton, StyledBox, StyledAutocomplete, IconCheckbox, CheckedIcon, StyledPaper, StyledRating }

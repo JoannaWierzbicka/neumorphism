@@ -45,9 +45,9 @@ export const App = () => {
     <>
       <CssBaseline/>
       <Container
-        maxWidth={'lg'}
+        maxWidth={'md'}
         sx={{
-          m: 4
+          mt: '40px'
         }}
       ><StyledBox>
         {!startForm ? (<MainPage startForm={() => turnFirstPage()}/>) : null}
@@ -58,7 +58,7 @@ export const App = () => {
               align={'center'}
               >
               ANKIETA
-              </Typography>
+            </Typography>
               <Stepper
                 activeStep={activeStep}
                 sx={{ pt: 3, pb: 3 }}
@@ -83,7 +83,7 @@ export const App = () => {
                   : (
                     <React.Fragment>
                       {getStepContent(activeStep)}
-                      <Box sx={{ width: '800px', display: 'flex', justifyContent: 'flex-end' }}>
+                      <Box sx={{ width: '800px', display: 'flex', justifyContent: 'space-around', paddingTop: '15px' }}>
                         {activeStep !== 0 && (
                           <StyledButton
                             onClick={handleBack}
@@ -105,7 +105,7 @@ export const App = () => {
             </>
             )
           : null}
-       </StyledBox>
+      </StyledBox>
       </Container>
 
     </>
