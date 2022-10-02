@@ -1,13 +1,6 @@
-import * as React from 'react'
-import { styled } from '@mui/material/styles'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Slider from '@mui/material/Slider'
-import MuiInput from '@mui/material/Input'
-
-const Input = styled(MuiInput)`
-  width: 42px;
-`
+import React from 'react'
+import { Box, Slider } from '@mui/material'
+import { StyledInput } from './styledComponents'
 
 export default function InputSlider () {
   const [value, setValue] = React.useState(30)
@@ -29,38 +22,27 @@ export default function InputSlider () {
   }
 
   return (
-    <Box sx={{ width: 250 }}>
-      <Grid
-        container
-        spacing={2}
-        alignItems={'center'}
-      >
-        <Grid
-          item
-          xs
-        >
-          <Slider
-            value={typeof value === 'number' ? value : 0}
-            onChange={handleSliderChange}
-            aria-labelledby={'input-slider'}
-          />
-        </Grid>
-        <Grid item>
-          <Input
-            value={value}
-            size={'small'}
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 10,
-              min: 0,
-              max: 100,
-              type: 'number',
-              'aria-labelledby': 'input-slider'
-            }}
-          />
-        </Grid>
-      </Grid>
-    </Box>
+    <>
+      <Box sx={{ width: 370, display: 'flex' }}>
+        <Slider
+          sx={{ width: '50%' }}
+          value={typeof value === 'number' ? value : 0}
+          onChange={handleSliderChange}
+          aria-labelledby={'input-slider'}
+        />
+        <StyledInput
+          readOnly
+          value={value}
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          inputProps={{
+            step: 10,
+            min: 0,
+            max: 100,
+            'aria-labelledby': 'input-slider'
+          }}
+        />
+      </Box>
+    </>
   )
 }

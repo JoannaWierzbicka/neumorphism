@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { styled as styledMui } from '@mui/material/styles'
-import { Autocomplete, Box, Paper, Rating } from '@mui/material'
+import { Autocomplete, Box, Paper, Rating, Input, TextField } from '@mui/material'
 
 const StyledButton = styled.button`
 padding: 1rem 2rem;
@@ -35,7 +35,7 @@ box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
 
 `
 const StyledBox = styledMui(Box)(() => ({
-  height: '80vh',
+  height: '85vh',
   padding: '10px',
   display: 'flex',
   flexDirection: 'column',
@@ -98,4 +98,19 @@ const StyledRating = styled(Rating)({
   }
 })
 
-export { StyledButton, StyledBox, StyledAutocomplete, IconCheckbox, CheckedIcon, StyledPaper, StyledRating }
+const StyledInput = styled(Input)(() => ({
+  width: '20px',
+  marginLeft: '30px',
+  outline: 'none',
+  boxShadow: '0px 0px 1px rgb(148 148 148 / 78%), 4px 4px 2px rgb(41 60 73 / 30%)'
+
+}))
+
+const StyledTextField = styled(TextField)(() => ({
+  width: '80%',
+  boxShadow: 'inset 1px 1px 4px rgb(148 148 148 / 78%), inset 5px 5px 16px rgb(41 60 73 / 30%);',
+  marginBottom: '10px',
+  borderRadius: '5px'
+}))
+
+export { StyledButton, StyledBox, StyledAutocomplete, IconCheckbox, CheckedIcon, StyledPaper, StyledRating, StyledInput, StyledTextField }

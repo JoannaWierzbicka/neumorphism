@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react'
 
-import { Typography, Grid, Radio, RadioGroup, FormControlLabel, FormControl } from '@mui/material'
+import { Typography, Grid, FormControlLabel, RadioGroup, Radio, FormControl } from '@mui/material'
 
-import { StyledPaper } from '../styledComponents'
+import { StyledPaper, IconCheckbox, CheckedIcon, StyledTextField } from '../styledComponents'
 import SliderChange from '../SliderChange'
 
 export const ThirdPage = () => {
@@ -11,7 +11,7 @@ export const ThirdPage = () => {
     <>
       <Grid
         container
-        rowSpacing={1}
+        rowSpacing={0.5}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
         <Grid
@@ -22,21 +22,26 @@ export const ThirdPage = () => {
             <Typography
               align={'left'}
               variant={'body1'}
-              gutterBottom
             >Płeć:
             </Typography>
-            <FormControl>
+            <FormControl sx={{ width: 300 }}>
               <RadioGroup
                 row
               >
                 <FormControlLabel
                   value={'female'}
-                  control={<Radio />}
+                  control={<Radio
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
                   label={'Kobieta'}
                 />
                 <FormControlLabel
                   value={'male'}
-                  control={<Radio />}
+                  control={<Radio
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
                   label={'Mężczyzna'}
                 />
               </RadioGroup>
@@ -58,33 +63,67 @@ export const ThirdPage = () => {
 
           </StyledPaper>
         </Grid>
-        <Grid
-          item
-          xs={6}
-        >
-          <StyledPaper>
-            {/* <Typography
-              align={'left'}
-              variant={'body1'}
-              gutterBottom
-            >Jak ocenia Pan/Pani otoczenie obiektu oraz jego zagospodarowanie?
-            </Typography>
-            <HoverRating/> */}
-          </StyledPaper>
-        </Grid>
 
         <Grid
           item
           xs={6}
         >
           <StyledPaper>
-            {/* <Typography
+            <Typography
               align={'left'}
               variant={'body1'}
-              gutterBottom
-            >Jak ocenia Pan/Pani wygląd oraz wyposażenie pokoi?
+            >Skąd dowiedział/a się Pan/i o naszym obiekcie?
             </Typography>
-            <HoverRating/> */}
+            <FormControl sx={{ width: 300 }}>
+              <RadioGroup sx={{ padding: '5px' }}>
+                <FormControlLabel
+                  value={'not-first-time'}
+                  control={<Radio
+                    sx={{ padding: '5px' }}
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
+                  label={'Byłem/am już tu wcześniej'}
+                />
+                <FormControlLabel
+                  value={'family'}
+                  control={<Radio
+                    sx={{ padding: '5px' }}
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
+                  label={'Rodzina / Znajomi'}
+                />
+                <FormControlLabel
+                  value={'media'}
+                  control={<Radio
+                    sx={{ padding: '5px' }}
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
+                  label={'Media społecznościowe'}
+                />
+                <FormControlLabel
+                  value={'www'}
+                  control={<Radio
+                    sx={{ padding: '5px' }}
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
+                  label={'Strona internetowa obiektu'}
+                />
+                <FormControlLabel
+                  value={'other'}
+                  control={<Radio
+                    sx={{ padding: '5px' }}
+                    icon={<IconCheckbox/>}
+                    checkedIcon={<CheckedIcon/>}
+                           />}
+                  label={'Inne'}
+                />
+              </RadioGroup>
+            </FormControl>
+
           </StyledPaper>
         </Grid>
         <Grid
@@ -92,39 +131,19 @@ export const ThirdPage = () => {
           xs={6}
         >
           <StyledPaper>
-            {/* <Typography
+            <Typography
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Czy poleci Pan/Pani obiekt znajomym?
+            >Czy ma Pan/i dodatkowe uwagi, co możemy poprawić/zmienić?
             </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-              <Typography variant={'caption'}>NIE</Typography>
-              <Slider sx={{ width: '200px' }}/>
-              <Typography variant={'caption'}>TAK</Typography>
-            </Box> */}
+            <StyledTextField
+              id="outlined-multiline-static"
+              multiline
+              rows={6}
+            />
           </StyledPaper>
         </Grid>
-        <Grid
-          item
-          xs={6}
-        >
-          <StyledPaper>
-            {/* <Typography
-              align={'left'}
-              variant={'body1'}
-              gutterBottom
-            >Ocena ogólna obiektu:
-            </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-              <SentimentVeryDissatisfiedIcon/>
-              <Slider sx={{ width: '200px' }}/>
-              <SentimentVerySatisfiedIcon/>
-            </Box> */}
-
-          </StyledPaper>
-        </Grid>
-
       </Grid>
     </>
   )
