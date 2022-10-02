@@ -20,8 +20,8 @@ export const FirstPage = () => {
 
             variant={'body1'}
             gutterBottom
-                >Proszę określić rodzaj pobytu:
-          </Typography>
+                       >Proszę określić rodzaj pobytu:
+                       </Typography>
             <StyledAutocomplete
               blurOnSelect
               options={['prywatny', 'służbowy']}
@@ -37,8 +37,8 @@ export const FirstPage = () => {
             align={'left'}
             variant={'body1'}
             gutterBottom
-                >Jak długo trwał pobyt?
-          </Typography>
+                       >Jak długo trwał pobyt?
+                       </Typography>
             <StyledAutocomplete
               blurOnSelect
               options={['1 doba', '2 doby', '3 doby', '4 doby', '5 lub więcej']}
@@ -59,8 +59,8 @@ export const FirstPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-                   >Ile osób korzystało z noclegu?
-            </Typography>
+                          >Ile osób korzystało z noclegu?
+                          </Typography>
               <StyledAutocomplete
                 blurOnSelect
                 options={[1, 2, 3, 4, '5 lub więcej']}
@@ -76,8 +76,8 @@ export const FirstPage = () => {
               align={'left'}
               variant={'body1'}
               gutterBottom
-                   >Czy korzystali Państwo z wyżywienia?
-            </Typography>
+                          >Czy korzystali Państwo z wyżywienia?
+                          </Typography>
               <StyledAutocomplete
                 blurOnSelect
                 options={['Tak - śniadanie i obiadokolacja', 'Tak - tylko śniadanie', 'Nie']}
@@ -95,8 +95,8 @@ export const FirstPage = () => {
             align={'left'}
             variant={'body1'}
             gutterBottom
-                >Z których atrakcji Państwo korzystali?
-          </Typography>
+                       >Z których atrakcji Państwo korzystali?
+                       </Typography>
             <FormGroup>
               <FormControlLabel
                 control={

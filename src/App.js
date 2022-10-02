@@ -9,6 +9,7 @@ import ThirdPage from './components/pages/ThirdPage'
 
 import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box } from '@mui/material'
 import { StyledBox, StyledButton } from './components/styledComponents'
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon'
 
 export const App = () => {
   const [activeStep, setActiveStep] = React.useState(0)
@@ -72,12 +73,16 @@ export const App = () => {
               <React.Fragment>
                 {activeStep === steps.length
                   ? (
-                    <Typography
-                      variant={'h5'}
-                      gutterBottom
-                    >
-                      Dziękujemy za wypełnienie ankiety
-                    </Typography>
+                    <>
+                      <Typography
+                        variant={'h5'}
+                        mt={10}
+                      >
+                        Dziękujemy za wypełnienie ankiety
+                      </Typography>
+                      <br/>
+                      <InsertEmoticonIcon/>
+                    </>
               
                     )
                   : (
