@@ -4,10 +4,11 @@ import FirstPage from './pages/FirstPage'
 import SecondPage from './pages/SecondPage'
 import ThirdPage from './pages/ThirdPage'
 
-import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box } from '@mui/material'
+import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box, Fab, Tooltip } from '@mui/material'
 import { StyledBox } from './styledComponents/StyledBox'
 import { StyledButton } from './styledComponents/StyledButton'
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon'
+import FacebookIcon from '@mui/icons-material/Facebook'
 
 export const App = () => {
   const [activeStep, setActiveStep] = React.useState(0)
@@ -80,7 +81,28 @@ export const App = () => {
                           Dziękujemy za wypełnienie ankiety
                         </Typography>
                         <br/>
-                        <InsertEmoticonIcon/>
+                        <Tooltip title={'Thank You ;)'}>
+                          <Fab
+                            color={'success'}
+                            disableRipple
+                          >
+                            <InsertEmoticonIcon/>
+                          </Fab>
+                        </Tooltip>
+
+                        <Typography
+                          variant={'h6'}
+                          mt={10}
+                        >
+                          Odwiedź nas na Facebooku
+                        </Typography>
+                        <br/>
+                        <Fab
+                          href={'https://www.facebook.com/profile.php?id=100083132480932'}
+                          color={'primary'}
+                        >
+                          <FacebookIcon />
+                        </Fab>
                       </>
 
                       )

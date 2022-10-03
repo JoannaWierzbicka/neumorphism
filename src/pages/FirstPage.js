@@ -33,7 +33,7 @@ export const FirstPage = () => {
           </Typography>
           <HoverRating/>
         </StyledPaper>
-        </Grid>
+      </Grid>
         <Grid
           item
           xs={12}
@@ -86,7 +86,9 @@ export const FirstPage = () => {
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', mt: 2, mb: 1 }}>
               <Typography variant={'caption'}>BARDZO ŹLE</Typography>
-              <Rating max={8}/>
+              <Rating
+                max={8}
+              />
               <Typography variant={'caption'}>SUPER</Typography>
             </Box>
           </StyledPaper>
@@ -120,17 +122,18 @@ export const FirstPage = () => {
             variant={'body1'}
             gutterBottom
                        >Z czego była/eś najbardziej zadowolony?
-          </Typography>
+                       </Typography>
             <StyledAutocomplete
+              id={'satisfaction'}
               blurOnSelect
-              options={['Lokalizacja', 'Otoczenie obiektu', 'Wyposażenie pokoi', 'Miła obsługa']}
+              options={['Lokalizacja', 'Otoczenie obiektu', 'Wyposażenie pokoi', 'Miła obsługa', 'Inne']}
               renderInput={(params) => <TextField {...params}/>}
             />
           </StyledPaper>
         </Grid>
 
       </Grid>
-    </Grid>
+      </Grid>
     </>
   )
 }
