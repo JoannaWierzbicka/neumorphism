@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Box } from '@mui/material'
-import { StyledButton } from '../components/styledComponents'
+import { StyledButton } from '../styledComponents/StyledButton'
 import PropTypes from 'prop-types'
 
 export const MainPage = (props) => {

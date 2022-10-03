@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
+import { StyledAutocomplete } from '../styledComponents/StyledAutocomplete'
+import { StyledPaper } from '../styledComponents/StyledPaper'
 
 import { Typography, TextField, Grid, Rating, Box } from '@mui/material'
-import { StyledAutocomplete, StyledPaper } from '../components/styledComponents'
 
 import HoverRating from '../helpers/HoverRating'
 

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
-import { StyledRating } from '../components/styledComponents'
+import { StyledRating } from '../styledComponents/StyledRating'
 
 const labels = {
   1: 'BARDZO ŹLE',

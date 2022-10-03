@@ -1,11 +1,12 @@
 import React from 'react'
 
 import { Typography, Grid, Checkbox, FormControlLabel, FormGroup, Slider, Box } from '@mui/material'
+import { StyledPaper } from '../styledComponents/StyledPaper'
 
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied'
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied'
 
-import { StyledPaper, IconCheckbox, CheckedIcon } from '../components/styledComponents'
+import { IconCheckbox, CheckedIcon } from '../styledComponents/StyledIcons'
 
 export const SecondPage = () => {
   return (

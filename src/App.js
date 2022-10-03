@@ -1,14 +1,12 @@
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import MainPage from './pages/MainPage'
 import FirstPage from './pages/FirstPage'
 import SecondPage from './pages/SecondPage'
 import ThirdPage from './pages/ThirdPage'
 
-import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box, Avatar } from '@mui/material'
-import { StyledBox, StyledButton } from './components/styledComponents'
+import { Container, CssBaseline, Stepper, Step, StepLabel, Typography, Box } from '@mui/material'
+import { StyledBox } from './styledComponents/StyledBox'
+import { StyledButton } from './styledComponents/StyledButton'
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon'
 
 export const App = () => {
@@ -37,11 +35,11 @@ export const App = () => {
         throw new Error('Unknown step')
     }
   }
-  
+
   const turnFirstPage = () => {
     setStartForm(true)
   }
-  
+
   return (
     <>
       <CssBaseline/>
@@ -52,8 +50,8 @@ export const App = () => {
         }}
       ><StyledBox>
         {!startForm
-          ? (<MainPage startForm={() => turnFirstPage()}/>) 
-          : 
+          ? (<MainPage startForm={() => turnFirstPage()}/>)
+          :
             (
               <><Typography
                 variant={'h6'}
@@ -84,7 +82,7 @@ export const App = () => {
                         <br/>
                         <InsertEmoticonIcon/>
                       </>
-              
+
                       )
                     : (
                       <React.Fragment>

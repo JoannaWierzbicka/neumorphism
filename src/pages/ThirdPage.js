@@ -2,8 +2,10 @@
 import React from 'react'
 
 import { Typography, Grid, FormControlLabel, RadioGroup, Radio, FormControl } from '@mui/material'
+import { StyledPaper } from '../styledComponents/StyledPaper'
 
-import { StyledPaper, IconCheckbox, CheckedIcon, StyledTextField } from '../components/styledComponents'
+import { StyledTextField } from '../styledComponents/StyledTextField'
+import { IconCheckbox, CheckedIcon } from '../styledComponents/StyledIcons'
 import SliderChange from '../helpers/SliderChange'
 
 export const ThirdPage = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Slider } from '@mui/material'
-import { StyledInput } from '../components/styledComponents'
+import { StyledInput } from '../styledComponents/StyledInput'
 
 export default function InputSlider () {
   const [value, setValue] = React.useState(1)
