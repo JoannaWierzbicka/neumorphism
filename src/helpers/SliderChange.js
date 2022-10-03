@@ -1,9 +1,9 @@
 import React from 'react'
 import { Box, Slider } from '@mui/material'
-import { StyledInput } from './styledComponents'
+import { StyledInput } from '../components/styledComponents'
 
 export default function InputSlider () {
-  const [value, setValue] = React.useState(30)
+  const [value, setValue] = React.useState(1)
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue)
@@ -23,9 +23,9 @@ export default function InputSlider () {
 
   return (
     <>
-      <Box sx={{ width: 370, display: 'flex' }}>
+      <Box sx={{ width: 500, display: 'flex', justifyContent: 'center', ml: 2 }}>
         <Slider
-          sx={{ width: '50%' }}
+          sx={{ width: '100%' }}
           value={typeof value === 'number' ? value : 0}
           onChange={handleSliderChange}
           aria-labelledby={'input-slider'}
@@ -36,8 +36,8 @@ export default function InputSlider () {
           onChange={handleInputChange}
           onBlur={handleBlur}
           inputProps={{
-            step: 10,
-            min: 0,
+            step: 1,
+            min: 1,
             max: 100,
             'aria-labelledby': 'input-slider'
           }}

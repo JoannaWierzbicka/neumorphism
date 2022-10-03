@@ -3,8 +3,8 @@ import React from 'react'
 
 import { Typography, Grid, FormControlLabel, RadioGroup, Radio, FormControl } from '@mui/material'
 
-import { StyledPaper, IconCheckbox, CheckedIcon, StyledTextField } from '../styledComponents'
-import SliderChange from '../SliderChange'
+import { StyledPaper, IconCheckbox, CheckedIcon, StyledTextField } from '../components/styledComponents'
+import SliderChange from '../helpers/SliderChange'
 
 export const ThirdPage = () => {
   return (
@@ -14,56 +14,6 @@ export const ThirdPage = () => {
         rowSpacing={0.5}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        <Grid
-          item
-          xs={6}
-        >
-          <StyledPaper>
-            <Typography
-              align={'left'}
-              variant={'body1'}
-            >Płeć:
-            </Typography>
-            <FormControl sx={{ width: 300 }}>
-              <RadioGroup
-                row
-              >
-                <FormControlLabel
-                  value={'female'}
-                  control={<Radio
-                    icon={<IconCheckbox/>}
-                    checkedIcon={<CheckedIcon/>}
-                           />}
-                  label={'Kobieta'}
-                />
-                <FormControlLabel
-                  value={'male'}
-                  control={<Radio
-                    icon={<IconCheckbox/>}
-                    checkedIcon={<CheckedIcon/>}
-                           />}
-                  label={'Mężczyzna'}
-                />
-              </RadioGroup>
-            </FormControl>
-          </StyledPaper>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-        >
-          <StyledPaper>
-            <Typography
-              align={'left'}
-              variant={'body1'}
-              gutterBottom
-            >Wiek:
-            </Typography>
-            <SliderChange/>
-
-          </StyledPaper>
-        </Grid>
-
         <Grid
           item
           xs={6}
@@ -125,25 +75,41 @@ export const ThirdPage = () => {
             </FormControl>
 
           </StyledPaper>
-        </Grid>
-        <Grid
+        </Grid><Grid
           item
           xs={6}
+               >
+          <StyledPaper>
+            <Typography
+              align={'left'}
+              variant={'body1'}
+              gutterBottom
+            >Miejsce na dodatkowe uwagi:
+            </Typography>
+            <StyledTextField
+              id={'outlined-multiline-static'}
+              multiline
+              rows={6}
+            />
+          </StyledPaper>
+               </Grid>
+
+        <Grid
+          item
+          xs={12}
         >
           <StyledPaper>
             <Typography
               align={'left'}
               variant={'body1'}
               gutterBottom
-            >Czy ma Pan/i dodatkowe uwagi, co możemy poprawić/zmienić?
+            >Czy łatwo było znaleźć ofertę naszego obiektu (reklamy w internecie itp.)? (0 oznacza dużą trudność)
             </Typography>
-            <StyledTextField
-              id="outlined-multiline-static"
-              multiline
-              rows={6}
-            />
+            <SliderChange/>
+
           </StyledPaper>
         </Grid>
+
       </Grid>
     </>
   )

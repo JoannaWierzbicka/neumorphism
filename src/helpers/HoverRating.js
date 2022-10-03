@@ -3,14 +3,17 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
-import { StyledRating } from './styledComponents'
+import { StyledRating } from '../components/styledComponents'
 
 const labels = {
   1: 'BARDZO ŹLE',
   2: 'ŹLE',
-  3: 'OK',
-  4: 'DOBRZE',
-  5: 'SUPER'
+  3: 'SŁABO',
+  4: 'TAK SOBIE',
+  5: 'NIEŹLE',
+  6: 'W PORZĄDKU',
+  7: 'DOBRZE',
+  8: 'BARDZO DOBRZE'
 }
 
 function getLabelText (value) {
@@ -24,13 +27,14 @@ export default function HoverRating () {
   return (
     <Box
       sx={{
-        width: 250,
-        ml: 10,
+        width: 320,
+        ml: 5,
         display: 'flex',
         alignItems: 'center'
       }}
     >
       <StyledRating
+        max={8}
         value={value}
         getLabelText={getLabelText}
         onChange={(event, newValue) => {
