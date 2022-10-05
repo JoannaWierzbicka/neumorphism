@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
@@ -43,8 +44,8 @@ export default function HoverRating () {
         onChangeActive={(event, newHover) => {
           setHover(newHover)
         }}
-        icon={<FavoriteIcon/>}
-        emptyIcon={<FavoriteBorderIcon/>}
+        icon={<FavoriteIcon />}
+        emptyIcon={<FavoriteBorderIcon />}
       />
       {value !== null && (
         <Box sx={{ ml: 2 }}><Typography variant={'caption'}>{labels[hover !== -1 ? hover : value]}</Typography></Box>
